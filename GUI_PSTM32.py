@@ -64,7 +64,7 @@ class UARTApp:
                 messagebox.showwarning("Warning", "Please select a COM port.")
                 return
             
-            self.serial_port = serial.Serial(port, baudrate=9600, timeout=1)
+            self.serial_port = serial.Serial(port, baudrate=115200, timeout=1)
             messagebox.showinfo("Info", f"Port {port} opened successfully.")
             self.receive_thread = threading.Thread(target=self.receive_data)
             self.receive_thread.daemon = True
